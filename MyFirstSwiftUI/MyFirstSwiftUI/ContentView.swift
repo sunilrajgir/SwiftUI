@@ -10,7 +10,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            HStack {
+                Text("Target Color Block")
+                Text("Guess Color Block")
+            }
+            
+            Text("Hit me button")
+
+            VStack {
+              Text("Red slider")
+              Text("Green slider")
+              Text("Blue slider")
+            }
+            
+        }
     }
 }
 
