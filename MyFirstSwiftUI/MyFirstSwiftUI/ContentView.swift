@@ -17,6 +17,7 @@ struct ContentView: View {
     @State var gGuess: Double
     @State var bGuess: Double
     @State var showAlert = false
+    @State var showAlert1 = false
     
     func computeScore() -> Int {
       let rDiff = rGuess - rTarget
@@ -28,6 +29,16 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            
+            Button(action: {
+                     print("Button Pushed")
+                     self.showAlert1 = true
+                 }) {
+                     Text("Show Modal")
+            }.sheet(isPresented: self.$showAlert1) {
+                     NewsView()
+            }
+
             HStack {
                 VStack {
                     Rectangle().foregroundColor(Color(red: rTarget, green: gTarget, blue: bTarget))
@@ -76,6 +87,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(rGuess: 0.5, gGuess: 0.5, bGuess: 0.5).previewLayout(.fixed(width: 568, height: 320))
+        ContentView(rGuess: 0.5, gGuess: 0.5, bGuess: 0.5)
     }
 }
