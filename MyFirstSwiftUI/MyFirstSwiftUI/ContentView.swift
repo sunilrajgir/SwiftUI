@@ -36,7 +36,7 @@ struct ContentView: View {
                  }) {
                      Text("Show Modal")
             }.sheet(isPresented: self.$showAlert1) {
-                     NewsView()
+                     NewsView(newsArray: testData)
             }
 
             HStack {

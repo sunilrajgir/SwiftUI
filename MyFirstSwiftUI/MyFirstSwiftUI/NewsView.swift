@@ -9,19 +9,23 @@
 import SwiftUI
 
 struct NewsView: View {
+    let newsArray : [NewsModel]
     var body: some View {
-        List(0..<5) { item in
-            Image("test").foregroundColor(.gray)
+        List(newsArray) { news in
+            Image(systemName:"\(news.newsImage)")
             VStack(alignment: .leading) {
-                Text("Sunil Kumar").foregroundColor(.black).fontWeight(.medium)
-                Text("Director").foregroundColor(.gray).fontWeight(.light)
+                Text("\(news.headline)")
+                    .font(.headline)
+                Text("\(news.time)")
+                    .font(.subheadline)
             }
         }
     }
 }
 
+
 struct NewsView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsView()
+        NewsView(newsArray: testData)
     }
 }
