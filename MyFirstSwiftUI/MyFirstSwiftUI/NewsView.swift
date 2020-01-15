@@ -11,14 +11,21 @@ import SwiftUI
 struct NewsView: View {
     let newsArray : [NewsModel]
     var body: some View {
-        List(newsArray) { news in
-            Image(systemName:"\(news.newsImage)")
-            VStack(alignment: .leading) {
-                Text("\(news.headline)")
-                    .font(.headline)
-                Text("\(news.time)")
-                    .font(.subheadline)
+        NavigationView {
+            List(newsArray) { news in
+                Image(news.newsImage)
+                VStack(alignment: .leading) {
+                    Text("\(news.headline)")
+                        .font(.headline)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(nil)
+                        .padding(5.0)
+                    Text("\(news.time)")
+                        .font(.subheadline)
+                        .padding(5.0)
+                }
             }
+        .navigationBarTitle("My First Swift List")
         }
     }
 }

@@ -11,9 +11,12 @@ import UIKit
 struct BasicView: View {
     @State var sliderValue = Double.random(in: 0..<1)
     var body: some View {
-        VStack {
-            Rectangle().padding(20.0).frame(width: 200.0, height: 200.0).foregroundColor(Color(red: self.sliderValue, green: self.sliderValue, blue: self.sliderValue))
-            Slider(value: self.$sliderValue).foregroundColor(.gray)
+        NavigationView {
+            VStack {
+                Rectangle().padding(20.0).frame(width: 200.0, height: 200.0).foregroundColor(Color(red: self.sliderValue, green: self.sliderValue, blue: self.sliderValue))
+                Slider(value: self.$sliderValue).foregroundColor(.gray)
+            }
+            .navigationBarTitle("My First App")
         }
     }
 }
