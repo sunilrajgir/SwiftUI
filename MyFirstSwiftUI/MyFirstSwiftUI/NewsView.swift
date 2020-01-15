@@ -13,19 +13,21 @@ struct NewsView: View {
     var body: some View {
         NavigationView {
             List(newsArray) { news in
-                Image(news.newsImage)
-                VStack(alignment: .leading) {
-                    Text("\(news.headline)")
-                        .font(.headline)
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(nil)
-                        .padding(5.0)
-                    Text("\(news.time)")
-                        .font(.subheadline)
-                        .padding(5.0)
+                NavigationLink(destination: BasicView()) {
+                    Image(news.newsImage).cornerRadius(4.0)
+                    VStack(alignment: .leading) {
+                        Text("\(news.headline)")
+                            .font(.headline)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .padding(5.0)
+                        Text("\(news.time)")
+                            .font(.subheadline)
+                            .padding(5.0)
+                    }
                 }
             }
-        .navigationBarTitle("My First Swift List")
+            .navigationBarTitle("My First Swift List")
         }
     }
 }
