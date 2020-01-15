@@ -11,21 +11,19 @@ import SwiftUI
 struct DetailView: View {
     let news : NewsModel
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(news.headline)
-                .font(.headline)
-                .fontWeight(.medium)
-                .foregroundColor(Color.black)
-            Text(news.time)
-                .font(.subheadline)
-                .fontWeight(.light)
-                .foregroundColor(Color.gray)
-            Image(news.newsImage)
-                .frame(width: 400.0, height: 200.0).aspectRatio(contentMode: .fill).cornerRadius(8)
-            Text(news.headline)
-            
-        }
-        
+            VStack(alignment: .leading, spacing: 50) {
+                Text(news.headline)
+                    .font(.headline)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.black)
+                Text(news.time)
+                    .font(.subheadline)
+                    .fontWeight(.light)
+                    .foregroundColor(Color.gray)
+                Image(news.newsImage)
+                    .frame(width: 400.0, height: 200.0).aspectRatio(contentMode: .fill).cornerRadius(8)
+                Text(news.headline)
+            }
     }
 }
 

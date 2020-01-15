@@ -30,7 +30,7 @@ struct NewsView_Previews: PreviewProvider {
 struct ExtractedView: View {
     let news:NewsModel
     var body: some View {
-        NavigationLink(destination: BasicView()) {
+        NavigationLink(destination: DetailView(news: news)) {
             Image(news.newsImage).frame(width: 100.0, height: 100.0).cornerRadius(4.0).aspectRatio(contentMode: .fit)
             VStack(alignment: .leading) {
                 Text("\(news.headline)")
