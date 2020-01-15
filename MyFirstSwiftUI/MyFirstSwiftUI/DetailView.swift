@@ -11,7 +11,7 @@ import SwiftUI
 struct DetailView: View {
     let news : NewsModel
     var body: some View {
-            VStack(alignment: .leading, spacing: 50) {
+            VStack(alignment: .leading, spacing: 10) {
                 Text(news.headline)
                     .font(.headline)
                     .fontWeight(.medium)
@@ -21,7 +21,7 @@ struct DetailView: View {
                     .fontWeight(.light)
                     .foregroundColor(Color.gray)
                 Image(news.newsImage)
-                    .frame(width: 400.0, height: 200.0).aspectRatio(contentMode: .fill).cornerRadius(8)
+                    .resizable().aspectRatio(contentMode: .fit)
                 Text(news.headline)
             }
     }
