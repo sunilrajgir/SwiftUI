@@ -31,7 +31,7 @@ struct ExtractedView: View {
     let news:NewsModel
     var body: some View {
         NavigationLink(destination: BasicView()) {
-            Image(news.newsImage).cornerRadius(4.0)
+            Image(news.newsImage).frame(width: 100.0, height: 100.0).cornerRadius(4.0).aspectRatio(contentMode: .fit)
             VStack(alignment: .leading) {
                 Text("\(news.headline)")
                     .font(.headline)
