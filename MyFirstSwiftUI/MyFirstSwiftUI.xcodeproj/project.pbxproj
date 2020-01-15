@@ -12,6 +12,7 @@
 		323998F623CF0AAB00CDF443 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323998F523CF0AAB00CDF443 /* DetailView.swift */; };
 		323998FB23CF544B00CDF443 /* CustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323998FA23CF544B00CDF443 /* CustomActivity.swift */; };
 		323998FD23CF55B200CDF443 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323998FC23CF55B200CDF443 /* LoaderView.swift */; };
+		3239991F23CF76AF00CDF443 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239991E23CF76AF00CDF443 /* AnimationView.swift */; };
 		3258957523CCC5E500765B7C /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258957423CCC5E500765B7C /* NewsView.swift */; };
 		326E4EDE23CA4C3C006A8FC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E4EDD23CA4C3C006A8FC7 /* AppDelegate.swift */; };
 		326E4EE023CA4C3C006A8FC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E4EDF23CA4C3C006A8FC7 /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 		323998F523CF0AAB00CDF443 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		323998FA23CF544B00CDF443 /* CustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivity.swift; sourceTree = "<group>"; };
 		323998FC23CF55B200CDF443 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		3239991E23CF76AF00CDF443 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		3258957423CCC5E500765B7C /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		326E4EDA23CA4C3C006A8FC7 /* MyFirstSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		326E4EDD23CA4C3C006A8FC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				323998F523CF0AAB00CDF443 /* DetailView.swift */,
 				323998FA23CF544B00CDF443 /* CustomActivity.swift */,
 				323998FC23CF55B200CDF443 /* LoaderView.swift */,
+				3239991E23CF76AF00CDF443 /* AnimationView.swift */,
 			);
 			path = MyFirstSwiftUI;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				326E4EDE23CA4C3C006A8FC7 /* AppDelegate.swift in Sources */,
+				3239991F23CF76AF00CDF443 /* AnimationView.swift in Sources */,
 				3258957523CCC5E500765B7C /* NewsView.swift in Sources */,
 				326E4EE023CA4C3C006A8FC7 /* SceneDelegate.swift in Sources */,
 				323998F623CF0AAB00CDF443 /* DetailView.swift in Sources */,
