@@ -35,3 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+//1. Xcode changes
+//2. SwiftUI vs UIKit, UIAppKit, UIWatchKit, compatibility
+//3. show image, text, button, cell, table, loader, navigation
+//4. push and pop
+//5. how to use UIKit framework in SwiftUI framework
+
