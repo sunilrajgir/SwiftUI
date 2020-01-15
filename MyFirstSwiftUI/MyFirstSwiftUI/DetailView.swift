@@ -24,11 +24,15 @@ struct DetailView: View {
                     .resizable().aspectRatio(contentMode: .fit)
                 Text(news.headline)
             }
+            .padding(10.0)
+            .navigationBarTitle("News Detail", displayMode: .inline)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(news: testData[0])
+        NavigationView {
+            DetailView(news: testData[0])
+        }
     }
 }

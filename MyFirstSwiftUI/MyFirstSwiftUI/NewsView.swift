@@ -15,7 +15,7 @@ struct NewsView: View {
             List(newsArray) { news in
                 ExtractedView(news: news)
             }
-            .navigationBarTitle("My First Swift List")
+            .navigationBarTitle("Top News", displayMode: .inline)
         }
     }
 }
