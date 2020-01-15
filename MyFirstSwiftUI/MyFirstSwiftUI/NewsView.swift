@@ -13,19 +13,7 @@ struct NewsView: View {
     var body: some View {
         NavigationView {
             List(newsArray) { news in
-                NavigationLink(destination: BasicView()) {
-                    Image(news.newsImage).cornerRadius(4.0)
-                    VStack(alignment: .leading) {
-                        Text("\(news.headline)")
-                            .font(.headline)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(nil)
-                            .padding(5.0)
-                        Text("\(news.time)")
-                            .font(.subheadline)
-                            .padding(5.0)
-                    }
-                }
+                ExtractedView(news: news)
             }
             .navigationBarTitle("My First Swift List")
         }
@@ -36,5 +24,24 @@ struct NewsView: View {
 struct NewsView_Previews: PreviewProvider {
     static var previews: some View {
         NewsView(newsArray: testData)
+    }
+}
+
+struct ExtractedView: View {
+    let news:NewsModel
+    var body: some View {
+        NavigationLink(destination: BasicView()) {
+            Image(news.newsImage).cornerRadius(4.0)
+            VStack(alignment: .leading) {
+                Text("\(news.headline)")
+                    .font(.headline)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(nil)
+                    .padding(5.0)
+                Text("\(news.time)")
+                    .font(.subheadline)
+                    .padding(5.0)
+            }
+        }
     }
 }
