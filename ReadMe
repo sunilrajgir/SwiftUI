@@ -1,1 +1,20 @@
 working with swiftUi framework
+
+-(void)checkCompletionBlockSyntax {
+    [self getCallWithCompletionBlock:^(NSString *name, NSString *age) {
+        NSLog(@"name and age == > %@ ,,, %@", name, age);
+    }];
+    
+    [self getComletionBlockWithReturn:^BOOL(NSString *name) {
+        return true;
+    }];
+}
+
+-(void)getCallWithCompletionBlock:(void(^)(NSString* name, NSString * age))completionBlock {
+    completionBlock(@"Sunil", @"Kumar");
+
+}
+
+-(void)getComletionBlockWithReturn:(BOOL(^)(NSString* name))completionBlock {
+    BOOL p = completionBlock(@"Sunil");
+}
